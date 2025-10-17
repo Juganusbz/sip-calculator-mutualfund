@@ -1,0 +1,182 @@
+/* General Styling */
+:root {
+    --primary-purple: #6A0DAD; 
+    --accent-green: #00CC66;   
+    --light-grey: #f4f4f4;
+    --dark-grey: #333;
+    --text-color: #444;
+    --border-color: #ddd;
+    --shadow-light: rgba(0, 0, 0, 0.05);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-grey);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-color: var(--primary-purple);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 2px 4px var(--shadow-light);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+/* Input Styling */
+.input-row {
+    display: flex;
+    flex-direction: column; /* Mobile stack */
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 0; 
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-grey);
+}
+
+.input-group input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; 
+    transition: border-color 0.3s ease;
+}
+
+.input-hint {
+    margin-top: 5px;
+    font-size: 0.85em;
+    color: #888; 
+    font-weight: 400;
+}
+
+/* Button */
+#calculateBtn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-purple);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    margin-top: 20px; 
+}
+
+/* Results Section */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.result-item {
+    background-color: var(--light-grey);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.result-item h3 {
+    margin-top: 0;
+    font-size: 1em;
+    color: var(--dark-grey);
+    font-weight: 600;
+}
+
+.result-item p {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin: 10px 0 0;
+    color: var(--primary-purple);
+}
+
+.result-item p.green-text {
+    color: var(--accent-green);
+}
+
+.result-item.total-value p {
+    font-size: 2.2em;
+}
+
+/* Chart Container */
+.chart-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* AdSense Banners */
+.ad-banner {
+    margin: 25px auto;
+    text-align: center;
+    min-height: 100px; 
+    background-color: var(--light-grey);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Adjustments for Desktop/Tablet */
+@media (min-width: 768px) {
+    .input-row {
+        flex-direction: row; /* Desktop: side-by-side */
+        justify-content: space-between;
+    }
+
+    .input-row .input-group {
+        flex: 1;
+    }
+
+    #calculateBtn {
+        width: 100%; 
+        margin-top: 30px; 
+    }
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--dark-grey);
+    color: white;
+    font-size: 0.9em;
+    margin-top: 30px;
+}

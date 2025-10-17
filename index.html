@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator - Plan Your Wealth</title>
+    <meta name="description" content="Calculate your Systematic Investment Plan (SIP) maturity amount, total invested, and estimated returns. Plan your wealth effectively with our easy-to-use financial calculator.">
+    <meta name="keywords" content="SIP calculator, systematic investment plan, investment calculator, mutual funds, financial planning, wealth management, estimated returns, maturity value">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_PUBLISHER_ID" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>SIP Calculator</h1>
+        <p>Plan Your Wealth, Systematically.</p>
+    </header>
+
+    <main class="container">
+        
+        <div class="ad-banner top-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_PUBLISHER_ID"
+                 data-ad-slot="YOUR_TOP_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <section class="calculator-section">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="monthlySIP">Monthly Investment (₹)</label>
+                    <input type="number" id="monthlySIP" value="5000" min="500" required>
+                    <div class="input-hint">Min: ₹500</div> 
+                </div>
+                <div class="input-group">
+                    <label for="investmentDuration">Investment Duration (Years)</label>
+                    <input type="number" id="investmentDuration" value="10" min="1" max="40" required>
+                    <div class="input-hint">1 to 40 years</div> 
+                </div>
+                <div class="input-group">
+                    <label for="expectedReturn">Expected Return (% p.a.)</label>
+                    <input type="number" id="expectedReturn" value="12" min="1" max="30" step="0.1" required>
+                    <div class="input-hint">Typical: 10-15%</div>
+                </div>
+            </div>
+            
+            <button id="calculateBtn">Calculate</button>
+        </section>
+
+        
+        <div class="ad-banner middle-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_PUBLISHER_ID"
+                 data-ad-slot="YOUR_MIDDLE_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <section class="results-section">
+            <h2>Your SIP Investment Details</h2>
+            <div class="results-grid">
+                <div class="result-item">
+                    <h3>Total Invested Amount</h3>
+                    <p id="totalInvested">₹ 0</p>
+                </div>
+                <div class="result-item">
+                    <h3>Estimated Returns</h3>
+                    <p id="estimatedReturns" class="green-text">₹ 0</p>
+                </div>
+                <div class="result-item total-value">
+                    <h3>Total Maturity Value</h3>
+                    <p id="maturityValue">₹ 0</p>
+                </div>
+            </div>
+            <div class="chart-container">
+                <canvas id="sipChart"></canvas>
+            </div>
+        </section>
+
+        
+        <div class="ad-banner bottom-ad">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_PUBLISHER_ID"
+                 data-ad-slot="YOUR_BOTTOM_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
+
+        <section class="extra-info">
+            <h2>Why SIP?</h2>
+            <p>A Systematic Investment Plan (SIP) allows you to invest a fixed amount regularly (e.g., monthly) into a mutual fund scheme. It's a disciplined approach to investing that helps in wealth creation over the long term through rupee cost averaging and the power of compounding.</p>
+            <div class="compare-plans">
+                <h3>Compare SIP Plans (Coming Soon!)</h3>
+                <p>We're working on a feature to help you compare different SIP investment scenarios and fund options.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 SIP Calculator. All rights reserved.</p>
+        <p>Disclaimer: This calculator provides estimates for informational purposes only. Actual returns may vary.</p>
+    </footer>
+
+    <script src="SIPCalculator.js"></script>
+</body>
+</html>
